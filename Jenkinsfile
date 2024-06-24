@@ -14,6 +14,7 @@ pipeline {
         stage ('Analysis') { 
             steps {
                 sh '/var/lib/jenkins/apache-maven-3.8.8/bin/mvn --batch-mode -V -U -e checkstyle:checkstyle pmd:pmd pmd:cpd findbugs:findbugs'
+                echo 'IT WORKs'
             } 
         }
     } 
